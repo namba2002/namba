@@ -14,7 +14,7 @@
         <div class='posts'>
             @foreach ($posts as $post)
                 <div class='post'>
-                    <a href="/categories/{{ $post->category->id }}">{{$post->category->name}}</a>
+                    <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
                     <h2 class='title'>
                         <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
                     </h2>
@@ -26,6 +26,7 @@
                 </div>
             @endforeach
         </div>
+        <a href='/'>戻る</a>
         <div class='paginate'>
             {{ $posts->links() }}
         </div>
